@@ -1,8 +1,9 @@
 
-Guzzle, PHP HTTP client
+CFD公司會員api工具
 =======================
 
-CFD公司會員api工具
+CFD公司會員api工具，需配合維x的系統服用。
+預計未來更新自動token排程等需求。
 
 
 
