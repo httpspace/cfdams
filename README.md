@@ -47,7 +47,8 @@ $api->updateToken();
 $api->getExpireTokenInfo();
 ```
 
-## 是某需要更新token(預設2天，可於參數帶數字)
+## 是某需要更新token
+預設2天，可於參數帶數字
 ```php
 $days = 2;
 $api->isNeedUpdateToken($days);
