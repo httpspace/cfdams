@@ -14,7 +14,10 @@ $ composer require deror/cfdams
 
 ## 初始化設定方式
 ```php
-$api = new \Deror\Cfdams([
+
+use Deror\Cfdams;
+
+$api = new Cfdams([
     'sToken' => "{你取得的網站TOKEN}",# '必填'
     'url'    => "https://ams.domain.tw" # '選填'
 ]);
