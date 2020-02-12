@@ -29,6 +29,12 @@ $api = new Cfdams([
 ]);
 ```
 
+
+## 取得登入網址
+```php
+$api->getLoginUrl();
+```
+
 ## 更新token，到期日仍超過三天將無法更新
 ## 注意回傳token請重新記錄起來
 ```php
