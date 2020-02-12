@@ -34,11 +34,11 @@ $api->updateToken();
 $api->getExpireTokenInfo();
 ```
 
-## 是某需要更新token(2天)
+## 是某需要更新token(預設2天，可於參數帶數字)
 ```php
-$api->isNeedUpdateToken();
+$days = 2;
+$api->isNeedUpdateToken($days);
 ```
-
 ## 取得部門資訊
 ```php
 $api->getDepartment();

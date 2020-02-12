@@ -100,10 +100,10 @@ class Cfdams
     public function isNeedUpdateToken()
     {
 
-        $res = $this->getExpireTokenInfo();
+        $res = $this->getExpireTokenInfo($days = 2);
         if (
             $res['STATUS'] == 'SUCCESS' &&
-            ((strtotime($res['MESSAGE']) - strtotime(date('Y-m-d'))) / 86400) >= 2
+            ((strtotime($res['MESSAGE']) - strtotime(date('Y-m-d'))) / 86400) >= $days
         ) {
 
             return false;
