@@ -13,6 +13,11 @@ CFD公司會員api工具，需配合維x的系統服用。
 $ composer require deror/cfdams
 ```
 
+## 或
+```bash
+$ php composer.phar require deror/cfdams
+```
+
 ## 初始化設定方式
 ```php
 
