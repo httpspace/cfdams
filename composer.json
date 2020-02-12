@@ -1,6 +1,6 @@
 {
     "name": "deror/cfdams",
-    "description": "全副數位登入功能",
+    "description": "全副數位AMS登入功能",
     "license": "MIT",
     "type": "library",
     "authors": [{
