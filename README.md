@@ -35,8 +35,9 @@ $api = new Cfdams([
 $api->getLoginUrl();
 ```
 
-## 更新token，到期日仍超過三天將無法更新
-(注意回傳token請重新記錄起來)
+## 更新token，
+1.注意回傳token請重新記錄起來不見了就麻煩惹。
+2.到期日仍有三天以上，將無法成功更新。
 ```php
 $api->updateToken();
 ```
