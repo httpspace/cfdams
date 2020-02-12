@@ -1,0 +1,18 @@
+{
+    "name": "deror/cfdams",
+    "description": "全副數位登入功能",
+    "type": "library",
+    "authors": [{
+        "name": "Deror",
+        "email": "httpspace@gmail.com"
+    }],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Deror\\Cfdams\\": "src/Deror/Cfdams"
+        }
+    }
+}
