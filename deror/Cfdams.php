@@ -6,7 +6,7 @@
  * Time: 21:39
  */
 
-namespace Deror\Cfdams;
+namespace Deror;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -15,7 +15,7 @@ class Cfdams
 {
     protected $client = null;
     protected $url = "https://ams.scf.tw";
-    protected $sToken = "1231313654646498413161346489";
+    protected $sToken = "552fb38828126b81d7439ec1d6297734";
     protected $error = "";
 
     public function __construct(array $params = [])
@@ -53,7 +53,6 @@ class Cfdams
             return false;
         }
 
-        $this->error = "????";
         return false;
     }
 
@@ -89,7 +88,7 @@ class Cfdams
     /**
      * Get Token Expire Info
      */
-    public function getExpireToken()
+    public function getExpireTokenInfo()
     {
 
         return $this->post('/expireToken');
@@ -101,7 +100,7 @@ class Cfdams
     public function isNeedUpdateToken()
     {
 
-        $res = $this->getExpireToken();
+        $res = $this->getExpireTokenInfo();
         if (
             $res['STATUS'] == 'SUCCESS' &&
             ((strtotime($res['MESSAGE']) - strtotime(date('Y-m-d'))) / 86400) >= 2
@@ -147,5 +146,51 @@ class Cfdams
     {
 
         return $this->getEmployees('ALL');
+    }
+
+    /**
+     * 	取得離職員工
+     */
+    public function getEmployeesResign()
+    {
+
+        return $this->getEmployees('resign');
+    }
+
+    /**
+     * 	取得老闆
+     */
+    public function getBoss()
+    {
+
+        return $this->getEmployees(1);
+    }
+
+    /**
+     * 	取得IT
+     */
+    public function getEmployeesIT()
+    {
+
+        return $this->getEmployees(2);
+    }
+
+
+    /**
+     * 	企劃部
+     */
+    public function getEmployeesPlanning()
+    {
+
+        return $this->getEmployees(3);
+    }
+
+    /**
+     * 	人事部
+     */
+    public function getEmployeesPersonnel()
+    {
+
+        return $this->getEmployees(5);
     }
 }

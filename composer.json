@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Deror\\Cfdams\\": "src/Deror/Cfdams"
+            "Deror\\": "deror"
         }
     }
 }
