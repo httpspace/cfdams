@@ -36,7 +36,7 @@ $api->getLoginUrl();
 ```
 
 ## 更新token，到期日仍超過三天將無法更新
-## 注意回傳token請重新記錄起來
+(注意回傳token請重新記錄起來)
 ```php
 $api->updateToken();
 ```
